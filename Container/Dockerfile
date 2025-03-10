@@ -7,7 +7,7 @@ RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 RUN git clone https://github.com/google/CFU-Playground.git && cd CFU-Playground && ./scripts/setup
-RUN git clone https://github.com/PolykarposV/FLEX-RV-Emulator.git
+COPY ./CFU-Playground /workspace/FLEX-RV-Emulator
 RUN cp -rf FLEX-RV-Emulator/* CFU-Playground/
 RUN cd /tmp && wget https://static.dev.sifive.com/dev-tools/freedom-tools/v2020.08/riscv64-unknown-elf-gcc-10.1.0-2020.08.2-x86_64-linux-ubuntu14.tar.gz
 RUN tar zxvf /tmp/riscv64-unknown-elf-gcc-10.1.0-2020.08.2-x86_64-linux-ubuntu14.tar.gz -C /workspace/CFU-Playground
