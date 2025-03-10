@@ -21,3 +21,4 @@ RUN echo 'export RISCV=$HOME/CFU-Playground/riscv64-unknown-elf-gcc-10.1.0-2020.
 RUN echo 'export PATH=$RISCV/bin:$PATH' >> ~/.bashrc
 RUN cp ~/.bashrc /workspace/.bashrc
 RUN ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5
+RUN rm -rf /workspace/FLEX-RV-Emulator
