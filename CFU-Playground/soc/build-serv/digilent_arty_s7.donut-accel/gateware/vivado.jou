@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan 16 15:23:51 2025
+# Process ID: 35855
+# Current directory: /home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.donut-accel/gateware
+# Command line: vivado -mode batch -source digilent_arty_s7.tcl
+# Log file: /home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.donut-accel/gateware/vivado.log
+# Journal file: /home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.donut-accel/gateware/vivado.jou
+#-----------------------------------------------------------
+source digilent_arty_s7.tcl

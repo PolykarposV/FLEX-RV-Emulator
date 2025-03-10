@@ -1,0 +1,341 @@
+{
+    "csr_bases": {
+        "ctrl": 2181038080,
+        "ddrphy": 2181040128,
+        "identifier_mem": 2181042176,
+        "leds": 2181044224,
+        "sdram": 2181046272,
+        "timer0": 2181048320,
+        "uart": 2181050368
+    },
+    "csr_registers": {
+        "ctrl_reset": {
+            "addr": 2181038080,
+            "size": 1,
+            "type": "rw"
+        },
+        "ctrl_scratch": {
+            "addr": 2181038084,
+            "size": 1,
+            "type": "rw"
+        },
+        "ctrl_bus_errors": {
+            "addr": 2181038088,
+            "size": 1,
+            "type": "ro"
+        },
+        "ddrphy_rst": {
+            "addr": 2181040128,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_dly_sel": {
+            "addr": 2181040132,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_half_sys8x_taps": {
+            "addr": 2181040136,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_wlevel_en": {
+            "addr": 2181040140,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_wlevel_strobe": {
+            "addr": 2181040144,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_rdly_dq_rst": {
+            "addr": 2181040148,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_rdly_dq_inc": {
+            "addr": 2181040152,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_rdly_dq_bitslip_rst": {
+            "addr": 2181040156,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_rdly_dq_bitslip": {
+            "addr": 2181040160,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_wdly_dq_bitslip_rst": {
+            "addr": 2181040164,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_wdly_dq_bitslip": {
+            "addr": 2181040168,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_rdphase": {
+            "addr": 2181040172,
+            "size": 1,
+            "type": "rw"
+        },
+        "ddrphy_wrphase": {
+            "addr": 2181040176,
+            "size": 1,
+            "type": "rw"
+        },
+        "leds_out": {
+            "addr": 2181044224,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_control": {
+            "addr": 2181046272,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi0_command": {
+            "addr": 2181046276,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi0_command_issue": {
+            "addr": 2181046280,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi0_address": {
+            "addr": 2181046284,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi0_baddress": {
+            "addr": 2181046288,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi0_wrdata": {
+            "addr": 2181046292,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi0_rddata": {
+            "addr": 2181046296,
+            "size": 1,
+            "type": "ro"
+        },
+        "sdram_dfii_pi1_command": {
+            "addr": 2181046300,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi1_command_issue": {
+            "addr": 2181046304,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi1_address": {
+            "addr": 2181046308,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi1_baddress": {
+            "addr": 2181046312,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi1_wrdata": {
+            "addr": 2181046316,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi1_rddata": {
+            "addr": 2181046320,
+            "size": 1,
+            "type": "ro"
+        },
+        "sdram_dfii_pi2_command": {
+            "addr": 2181046324,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi2_command_issue": {
+            "addr": 2181046328,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi2_address": {
+            "addr": 2181046332,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi2_baddress": {
+            "addr": 2181046336,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi2_wrdata": {
+            "addr": 2181046340,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi2_rddata": {
+            "addr": 2181046344,
+            "size": 1,
+            "type": "ro"
+        },
+        "sdram_dfii_pi3_command": {
+            "addr": 2181046348,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi3_command_issue": {
+            "addr": 2181046352,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi3_address": {
+            "addr": 2181046356,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi3_baddress": {
+            "addr": 2181046360,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi3_wrdata": {
+            "addr": 2181046364,
+            "size": 1,
+            "type": "rw"
+        },
+        "sdram_dfii_pi3_rddata": {
+            "addr": 2181046368,
+            "size": 1,
+            "type": "ro"
+        },
+        "timer0_load": {
+            "addr": 2181048320,
+            "size": 1,
+            "type": "rw"
+        },
+        "timer0_reload": {
+            "addr": 2181048324,
+            "size": 1,
+            "type": "rw"
+        },
+        "timer0_en": {
+            "addr": 2181048328,
+            "size": 1,
+            "type": "rw"
+        },
+        "timer0_update_value": {
+            "addr": 2181048332,
+            "size": 1,
+            "type": "rw"
+        },
+        "timer0_value": {
+            "addr": 2181048336,
+            "size": 1,
+            "type": "ro"
+        },
+        "timer0_ev_status": {
+            "addr": 2181048340,
+            "size": 1,
+            "type": "ro"
+        },
+        "timer0_ev_pending": {
+            "addr": 2181048344,
+            "size": 1,
+            "type": "rw"
+        },
+        "timer0_ev_enable": {
+            "addr": 2181048348,
+            "size": 1,
+            "type": "rw"
+        },
+        "uart_rxtx": {
+            "addr": 2181050368,
+            "size": 1,
+            "type": "rw"
+        },
+        "uart_txfull": {
+            "addr": 2181050372,
+            "size": 1,
+            "type": "ro"
+        },
+        "uart_rxempty": {
+            "addr": 2181050376,
+            "size": 1,
+            "type": "ro"
+        },
+        "uart_ev_status": {
+            "addr": 2181050380,
+            "size": 1,
+            "type": "ro"
+        },
+        "uart_ev_pending": {
+            "addr": 2181050384,
+            "size": 1,
+            "type": "rw"
+        },
+        "uart_ev_enable": {
+            "addr": 2181050388,
+            "size": 1,
+            "type": "rw"
+        },
+        "uart_txempty": {
+            "addr": 2181050392,
+            "size": 1,
+            "type": "ro"
+        },
+        "uart_rxfull": {
+            "addr": 2181050396,
+            "size": 1,
+            "type": "ro"
+        }
+    },
+    "constants": {
+        "config_clock_frequency": 100000000,
+        "config_cpu_reset_addr": 0,
+        "config_cpu_type_serv": null,
+        "config_cpu_variant_cfu": null,
+        "config_cpu_human_name": "serv",
+        "config_cpu_nop": "nop",
+        "uart_polling": null,
+        "config_l2_size": 8192,
+        "config_csr_data_width": 32,
+        "config_csr_alignment": 32,
+        "config_bus_standard": "wishbone",
+        "config_bus_data_width": 32,
+        "config_bus_address_width": 32,
+        "config_bus_bursting": 0
+    },
+    "memories": {
+        "rom": {
+            "base": 0,
+            "size": 131072,
+            "type": "cached"
+        },
+        "sram": {
+            "base": 16777216,
+            "size": 8192,
+            "type": "cached"
+        },
+        "main_ram": {
+            "base": 1073741824,
+            "size": 268435456,
+            "type": "cached"
+        },
+        "csr": {
+            "base": 2181038080,
+            "size": 65536,
+            "type": "io"
+        }
+    }
+}

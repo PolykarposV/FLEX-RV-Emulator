@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Mar  9 19:06:51 2025
+# Process ID: 32368
+# Current directory: /home/polykarpos/CFU-Playground/soc
+# Command line: vivado -mode tcl
+# Log file: /home/polykarpos/CFU-Playground/soc/vivado.log
+# Journal file: /home/polykarpos/CFU-Playground/soc/vivado.jou
+#-----------------------------------------------------------
+open_hw
+open_hw_manager
+connect_hw_server
+open_hw_target 
+set_property PROBES.FILE {} [lindex [get_hw_devices] {0}]
+set_property PROGRAM.FILE {/home/polykarpos/CFU-Playground/soc/build/xilinx_zybo_z7.demo/gateware/digilent_zybo_z7.bit} [lindex [get_hw_devices] {0}]
+program_hw_devices [lindex [get_hw_devices] {0}]
+refresh_hw_device [lindex [get_hw_devices] {0}]
+quit

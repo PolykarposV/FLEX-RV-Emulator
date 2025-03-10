@@ -1,0 +1,42 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Thu Jan 16 15:25:45 2025
+| Host         : LAPTOP-I4I07TAE running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_utilization -hierarchical -file digilent_arty_s7_utilization_hierarchical_synth.rpt
+| Design       : digilent_arty_s7
+| Device       : 7s50csga324-1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------+----------------+------------+------------+---------+------+------+--------+--------+------------+
+|       Instance       |     Module     | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++----------------------+----------------+------------+------------+---------+------+------+--------+--------+------------+
+| digilent_arty_s7     |          (top) |       3198 |       3052 |     144 |    2 | 2542 |     10 |     18 |          0 |
+|   (digilent_arty_s7) |          (top) |       2368 |       2222 |     144 |    2 | 2278 |     10 |     17 |          0 |
+|   cfu_1              |            cfu |         86 |         86 |       0 |    0 |   84 |      0 |      0 |          0 |
+|   serv_rf_top        |    serv_rf_top |        744 |        744 |       0 |    0 |  180 |      0 |      1 |          0 |
+|     cpu              |       serv_top |        730 |        730 |       0 |    0 |  163 |      0 |      0 |          0 |
+|       alu            |       serv_alu |          1 |          1 |       0 |    0 |    2 |      0 |      0 |          0 |
+|       bufreg         |    serv_bufreg |        224 |        224 |       0 |    0 |   33 |      0 |      0 |          0 |
+|       bufreg2        |   serv_bufreg2 |        252 |        252 |       0 |    0 |   32 |      0 |      0 |          0 |
+|       csr            |       serv_csr |          1 |          1 |       0 |    0 |    7 |      0 |      0 |          0 |
+|       ctrl           |      serv_ctrl |         14 |         14 |       0 |    0 |   34 |      0 |      0 |          0 |
+|       decode         |    serv_decode |         84 |         84 |       0 |    0 |   14 |      0 |      0 |          0 |
+|       immdec         |    serv_immdec |        126 |        126 |       0 |    0 |   27 |      0 |      0 |          0 |
+|       mem_if         |    serv_mem_if |          0 |          0 |       0 |    0 |    1 |      0 |      0 |          0 |
+|       state          |     serv_state |         36 |         36 |       0 |    0 |   13 |      0 |      0 |          0 |
+|     rf_ram           |    serv_rf_ram |          3 |          3 |       0 |    0 |    1 |      0 |      1 |          0 |
+|     rf_ram_if        | serv_rf_ram_if |         11 |         11 |       0 |    0 |   16 |      0 |      0 |          0 |
++----------------------+----------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

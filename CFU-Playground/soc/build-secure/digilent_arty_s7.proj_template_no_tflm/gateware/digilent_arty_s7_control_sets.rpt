@@ -1,0 +1,268 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Sat Jan 18 18:42:20 2025
+| Host         : LAPTOP-I4I07TAE running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_control_sets -verbose -file digilent_arty_s7_control_sets.rpt
+| Design       : digilent_arty_s7
+| Device       : xc7s50
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   190 |
+|    Minimum number of control sets                        |   190 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   486 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   190 |
+| >= 0 to < 4        |    16 |
+| >= 4 to < 6        |    44 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |    24 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |    12 |
+| >= 16              |    86 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             598 |          235 |
+| No           | No                    | Yes                    |               4 |            2 |
+| No           | Yes                   | No                     |             743 |          274 |
+| Yes          | No                    | No                     |            2203 |          718 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1174 |          397 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                                            Enable Signal                                            |                         Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+|  idelay_clk    |                                                                                                     |                                                                 |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_twtrcon_ready_i_1_n_0                         |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine0_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       | soc_basesoc_serial_tx_rs232phytx_next_value_ce1                                                     | sys_rst                                                         |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine6_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine7_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine2_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine5_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine4_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine3_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       | soc_basesoc_sdram_tfawcon_ready_reg0                                                                | soc_basesoc_sdram_tfawcon_ready_i_1_n_0                         |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine1_twtpcon_ready_i_1_n_0            |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_trrdcon_ready_i_1_n_0                         |                1 |              1 |         1.00 |
+|  idelay_clk    |                                                                                                     | soc_builder_xilinxasyncresetsynchronizerimpl0_async_reset       |                1 |              2 |         2.00 |
+|  sys_clk       |                                                                                                     | soc_builder_xilinxasyncresetsynchronizerimpl0_async_reset       |                1 |              2 |         2.00 |
+|  sys_clk       | VexRiscv/_zz_iBus_rsp_valid                                                                         | VexRiscv/dataCache_1/reset0                                     |                1 |              3 |         3.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_7[0]       | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_5[0]       | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_basesoc_sdram_bankmachine5_cmd_buffer_lookahead_level_reg[1][0] | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine0_next_state                                                         | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_6[0]       | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_basesoc_sdram_bankmachine2_cmd_buffer_lookahead_level_reg[0][0] | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine7_next_state                                                         | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_8[0]       | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_basesoc_sdram_bankmachine1_cmd_buffer_lookahead_level_reg[3][0] | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine3_next_state                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_done                                                                                            | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/E[0]                                                                | sys_rst                                                         |                2 |              4 |         2.00 |
+|  idelay_clk    | soc_crg_reset_counter[3]_i_1_n_0                                                                    | idelay_rst                                                      |                1 |              4 |         4.00 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_768_reg_2[0]                                             | VexRiscv/dataCache_1/reset0                                     |                2 |              4 |         2.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank2_out0_re                                                          | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine6_next_state                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_basesoc_uart_rx_fifo_syncfifo_re                                                                | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_multiplexer_next_state                                                          | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine4_next_state                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine2_next_state                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_basesoc_tx_tick                                                                                 | soc_basesoc_tx_phase[31]_i_1_n_0                                |                1 |              4 |         4.00 |
+|  sys_clk       | soc_basesoc_uart_tx_fifo_wrport_we__0                                                               | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_basesoc_rx_tick                                                                                 | soc_basesoc_rx_phase[31]_i_1_n_0                                |                1 |              4 |         4.00 |
+|  sys_clk       | soc_basesoc_sdram_time1[3]_i_1_n_0                                                                  | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine5_next_state                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_basesoc_uart_rx_fifo_wrport_we__0                                                               | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine3_trccon_ready_i_1_n_0             |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine0_trccon_ready_i_1_n_0             |                2 |              4 |         2.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine4_trccon_ready_i_1_n_0             |                2 |              4 |         2.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine7_trccon_ready_i_1_n_0             |                2 |              4 |         2.00 |
+|  sys_clk       |                                                                                                     | soc_builder_csr_bankarray_interface2_bank_bus_dat_r[3]_i_1_n_0  |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine2_trascon_count[1]_i_1_n_0         |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine1_trascon_count[1]_i_1_n_0         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_basesoc_uart_tx_fifo_syncfifo_re                                                                | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine1_next_state                                                         | sys_rst                                                         |                3 |              4 |         1.33 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine5_trccon_ready_i_1_n_0             |                2 |              4 |         2.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_bankmachine6_trascon_count[1]_i_1_n_0         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_a7ddrphy_half_sys8x_taps_storage[4]_i_1_n_0                                                     | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       | soc_basesoc_sdram_time0[4]_i_1_n_0                                                                  | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       | soc_basesoc_uart_rx_fifo_level0[4]_i_1_n_0                                                          | sys_rst                                                         |                1 |              5 |         5.00 |
+|  sys_clk       | soc_basesoc_uart_tx_fifo_level0[4]_i_1_n_0                                                          | sys_rst                                                         |                1 |              5 |         5.00 |
+|  sys_clk       | soc_basesoc_sdram_zqcs_executer_trigger[4]_i_1_n_0                                                  | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       |                                                                                                     | soc_builder_csr_bankarray_interface1_bank_bus_dat_r[4]_i_1_n_0  |                4 |              5 |         1.25 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_834_reg_1[0]                                             |                                                                 |                3 |              5 |         1.67 |
+|  sys_clk       | soc_basesoc_sdram_phaseinjector1_command_storage[5]_i_1_n_0                                         | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       |                                                                                                     | VexRiscv/dataCache_1/SR[0]                                      |                2 |              6 |         3.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi0_command0_re                                             | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi3_command0_re                                             | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi2_command0_re                                             | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_basesoc_sdram_sequencer_trigger                                                                 | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_basesoc_tx_data1_in0                                                                            |                                                                 |                2 |              7 |         3.50 |
+|  sys_clk       |                                                                                                     | soc_builder_csr_bankarray_interface5_bank_bus_dat_r[7]_i_1_n_0  |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_1                                                                         | VexRiscv/dataCache_1/reset0                                     |                4 |              8 |         2.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_15                                                                        | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_13                                                                        | VexRiscv/dataCache_1/reset0                                     |                2 |              8 |         4.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_12                                                                        | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_14                                                                        | VexRiscv/dataCache_1/reset0                                     |                2 |              8 |         4.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_7                                                                         | VexRiscv/dataCache_1/reset0                                     |                4 |              8 |         2.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_8                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_9                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_6                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_10                                                                        | VexRiscv/dataCache_1/reset0                                     |                4 |              8 |         2.00 |
+|  soc_crg_clkin |                                                                                                     |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_5                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_4                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/when_InstructionCache_l338                                          | VexRiscv/IBusCachedPlugin_cache/when_InstructionCache_l351      |                2 |              8 |         4.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_control0_re                                                 | sys_rst                                                         |                4 |              8 |         2.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_3                                                                         | VexRiscv/dataCache_1/reset0                                     |                4 |              8 |         2.00 |
+|  sys_clk       | VexRiscv/dataCache_1/p_0_in33_in                                                                    | VexRiscv/dataCache_1/stageB_flusher_counter[6]_i_1_n_0          |                3 |              8 |         2.67 |
+|  sys_clk       | soc_basesoc_uart_tx_fifo_syncfifo_re                                                                |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_11                                                                        | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_2                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | soc_basesoc_uart_rx_fifo_syncfifo_re                                                                |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       | VexRiscv/PmpPlugin_pmpcfg_0                                                                         | VexRiscv/dataCache_1/reset0                                     |                3 |              8 |         2.67 |
+|  sys_clk       | soc_basesoc_rx_data_rs232phyrx_next_value_ce1                                                       |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_timer_count1[9]_i_1_n_0                       |                2 |             10 |         5.00 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine3_row_col_n_addr_sel                                                   | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi2_address0_re                                             |                                                                 |                4 |             14 |         3.50 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine6_row_col_n_addr_sel                                                   | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_basesoc_sdram_phaseinjector3_address_storage[13]_i_1_n_0                                        |                                                                 |                5 |             14 |         2.80 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine0_row_col_n_addr_sel                                                   | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine2_row[13]_i_1_n_0                                                      | sys_rst                                                         |                2 |             14 |         7.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi1_address0_re                                             |                                                                 |                6 |             14 |         2.33 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine4_row_col_n_addr_sel                                                   | sys_rst                                                         |                5 |             14 |         2.80 |
+|  sys_clk       | soc_basesoc_sdram_phaseinjector0_address_storage[13]_i_1_n_0                                        |                                                                 |                4 |             14 |         3.50 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine7_row_col_n_addr_sel                                                   | sys_rst                                                         |                4 |             14 |         3.50 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine1_row[13]_i_1_n_0                                                      | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine5_row[13]_i_1_n_0                                                      | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_basesoc_uart_tx_fifo_wrport_we__0                                                               |                                                                 |                2 |             16 |         8.00 |
+|  sys_clk       | soc_basesoc_uart_rx_fifo_wrport_we__0                                                               |                                                                 |                2 |             16 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_adr_wishbone2csr_next_value_ce1                 | FSM_onehot_soc_builder_basesoc_wishbone2csr_state_reg_n_0_[1]   |                3 |             16 |         5.33 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_count_reg_2_sn_1                                        | VexRiscv/IBusCachedPlugin_cache/FDPE_1                          |                5 |             20 |         4.00 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine4_cmd_buffer_sink_ready                                                | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine2_cmd_buffer_sink_ready                                                | sys_rst                                                         |                6 |             23 |         3.83 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine7_cmd_buffer_sink_ready                                                | sys_rst                                                         |               10 |             23 |         2.30 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine5_cmd_buffer_sink_ready                                                | sys_rst                                                         |                6 |             23 |         3.83 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine1_cmd_buffer_sink_ready                                                | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine0_cmd_buffer_sink_ready                                                | sys_rst                                                         |               10 |             23 |         2.30 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine6_cmd_buffer_sink_ready                                                | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_basesoc_sdram_bankmachine3_cmd_buffer_sink_ready                                                | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_a7ddrphy_bitslip0_value30                                                                       | soc_a7ddrphy_bitslip7_value1                                    |               11 |             24 |         2.18 |
+|  sys_clk       |                                                                                                     | soc_count[0]_i_1_n_0                                            |                6 |             24 |         4.00 |
+|  sys_clk       | soc_a7ddrphy_bitslip8_value10                                                                       | soc_a7ddrphy_bitslip15_value1                                   |               12 |             24 |         2.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_zqcs_timer_count1[0]_i_1_n_0                  |                7 |             27 |         3.86 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/lineLoader_address[31]_i_1_n_0                                      |                                                                 |                7 |             27 |         3.86 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_769_reg[0]                                               | VexRiscv/dataCache_1/reset0                                     |               11 |             28 |         2.55 |
+|  sys_clk       | VexRiscv/dataCache_1/E[0]                                                                           |                                                                 |               10 |             30 |         3.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/IBusCachedPlugin_fetchPc_booted_reg                                 | VexRiscv/dataCache_1/reset0                                     |               12 |             30 |         2.50 |
+|  sys_clk       | soc_a7ddrphy_bitslip1_value00                                                                       | soc_a7ddrphy_bitslip15_value0                                   |               15 |             30 |         2.00 |
+|  sys_clk       | soc_a7ddrphy_bitslip0_value00                                                                       | soc_a7ddrphy_bitslip7_value0                                    |               17 |             30 |         1.76 |
+|  sys_clk       |                                                                                                     | VexRiscv/dataCache_1/reset0                                     |               19 |             31 |         1.63 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank0_scratch0_re                                                      | sys_rst                                                         |                7 |             32 |         4.57 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_832_reg[0]                                               |                                                                 |               12 |             32 |         2.67 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_3008_reg[0]                                              | VexRiscv/dataCache_1/reset0                                     |               12 |             32 |         2.67 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_833_reg[0]                                               |                                                                 |               19 |             32 |         1.68 |
+|  sys_clk       | VexRiscv/dataCache_1/memory_arbitration_isValid_reg_4[0]                                            |                                                                 |                8 |             32 |         4.00 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_773_reg[0]                                               |                                                                 |               11 |             32 |         2.91 |
+|  sys_clk       |                                                                                                     | soc_builder_csr_bankarray_interface4_bank_bus_dat_r[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/CsrPlugin_exceptionPortCtrl_exceptionContext_badAddr                |                                                                 |               19 |             32 |         1.68 |
+|  sys_clk       | VexRiscv/dataCache_1/writeBack_arbitration_isValid_reg[0]                                           |                                                                 |               11 |             32 |         2.91 |
+|  sys_clk       | VexRiscv/dataCache_1/writeBack_arbitration_isValid_reg[1]                                           |                                                                 |               13 |             32 |         2.46 |
+|  sys_clk       | VexRiscv/memory_DivPlugin_rs1[31]                                                                   | VexRiscv/dataCache_1/memory_DivPlugin_div_counter_willClear     |                8 |             32 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_dat_w_wishbone2csr_next_value_ce0                                               |                                                                 |                9 |             32 |         3.56 |
+|  sys_clk       | VexRiscv/memory_DivPlugin_div_result                                                                |                                                                 |                8 |             32 |         4.00 |
+|  sys_clk       | soc_basesoc_bus_errors                                                                              | sys_rst                                                         |                8 |             32 |         4.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_4          |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | soc_basesoc_timer_update_value_re                                                                   | sys_rst                                                         |                8 |             32 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_builder_csr_bankarray_interface0_bank_bus_dat_r[31]_i_1_n_0 |               14 |             32 |         2.29 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank4_load0_re                                                         | sys_rst                                                         |                7 |             32 |         4.57 |
+|  sys_clk       | VexRiscv/dataCache_1/stageB_mmuRsp_physicalAddress[30]_i_1_n_0                                      |                                                                 |               11 |             32 |         2.91 |
+|  sys_clk       | VexRiscv/dataCache_1/execute_CsrPlugin_csr_835_reg[0]                                               |                                                                 |               15 |             32 |         2.13 |
+|  sys_clk       |                                                                                                     | soc_basesoc_rx_phase[31]_i_1_n_0                                |                9 |             32 |         3.56 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi1_wrdata0_re                                              |                                                                 |                6 |             32 |         5.33 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank4_reload0_re                                                       | sys_rst                                                         |                7 |             32 |         4.57 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi2_wrdata0_re                                              |                                                                 |                8 |             32 |         4.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_tx_phase[31]_i_1_n_0                                |                9 |             32 |         3.56 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_3          |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_2          |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_fullmemorywe_state_reg[1]_0                     |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_1          |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]            |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_fullmemorywe_state_reg[1]                       |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/soc_builder_basesoc_litedramwishbone2native_state_reg[0]_0          |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       |                                                                                                     | soc_builder_csr_bankarray_interface3_bank_bus_dat_r[31]_i_1_n_0 |               21 |             32 |         1.52 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi0_wrdata0_re                                              |                                                                 |                7 |             32 |         4.57 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi3_wrdata0_re                                              |                                                                 |                8 |             32 |         4.00 |
+|  sys_clk       | VexRiscv/execute_PmpPlugin_fsmPending                                                               |                                                                 |               13 |             36 |         2.77 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_1                                                                           |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_7                                                                           |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_9                                                                           |                                                                 |               17 |             50 |         2.94 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_10                                                                          |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_3                                                                           |                                                                 |               14 |             50 |         3.57 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_14                                                                          |                                                                 |               15 |             50 |         3.33 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_5                                                                           |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_12                                                                          |                                                                 |               14 |             50 |         3.57 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_0                                                                           |                                                                 |               15 |             50 |         3.33 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_11                                                                          |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_2                                                                           |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_6                                                                           |                                                                 |               15 |             50 |         3.33 |
+|  sys_clk       | VexRiscv/PmpPlugin_mask_15[24]_i_1_n_0                                                              |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_13                                                                          |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_4                                                                           |                                                                 |               13 |             50 |         3.85 |
+|  sys_clk       | VexRiscv/PmpPlugin_base_8                                                                           |                                                                 |               14 |             50 |         3.57 |
+|  sys_clk       | VexRiscv/IBusCachedPlugin_cache/IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_ready              |                                                                 |               23 |             65 |         2.83 |
+|  sys_clk       | VexRiscv/dataCache_1_io_mem_cmd_ready                                                               |                                                                 |               19 |             70 |         3.68 |
+|  sys_clk       | VexRiscv/dataCache_1_io_mem_cmd_s2mPipe_ready                                                       |                                                                 |               18 |             70 |         3.89 |
+|  sys_clk       | VexRiscv/_zz_1                                                                                      |                                                                 |               12 |             96 |         8.00 |
+|  sys_clk       |                                                                                                     | soc_basesoc_sdram_master_p0_wrdata_mask[1]                      |               37 |            128 |         3.46 |
+|  sys_clk       | soc_basesoc_sdram_phaseinjector0_rddata_status[31]_i_1_n_0                                          | sys_rst                                                         |               49 |            128 |         2.61 |
+|  sys_clk       | VexRiscv/dataCache_1/when_CsrPlugin_l909_3                                                          |                                                                 |               60 |            140 |         2.33 |
+|  sys_clk       | VexRiscv/dataCache_1/when_PmpPlugin_l138                                                            |                                                                 |               71 |            177 |         2.49 |
+|  sys_clk       | VexRiscv/dataCache_1/memory_DivPlugin_div_counter_willClear                                         |                                                                 |               81 |            216 |         2.67 |
+|  sys_clk       |                                                                                                     | sys_rst                                                         |              104 |            298 |         2.87 |
+|  sys_clk       |                                                                                                     |                                                                 |              232 |            591 |         2.55 |
++----------------+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+
+

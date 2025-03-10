@@ -1,0 +1,36 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Sat Jan 18 16:42:29 2025
+| Host         : LAPTOP-I4I07TAE running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_utilization -hierarchical -file digilent_arty_s7_utilization_hierarchical_synth.rpt
+| Design       : digilent_arty_s7
+| Device       : 7s50csga324-1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------+------------------+------------+------------+---------+------+------+--------+--------+------------+
+|          Instance          |      Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++----------------------------+------------------+------------+------------+---------+------+------+--------+--------+------------+
+| digilent_arty_s7           |            (top) |       6823 |       6657 |     164 |    2 | 5678 |     10 |     29 |          7 |
+|   (digilent_arty_s7)       |            (top) |       2336 |       2190 |     144 |    2 | 2282 |     10 |     17 |          0 |
+|   VexRiscv                 |         VexRiscv |       4487 |       4467 |      20 |    0 | 3396 |      0 |     12 |          7 |
+|     (VexRiscv)             |         VexRiscv |       1148 |       1148 |       0 |    0 | 1441 |      0 |      2 |          4 |
+|     FpuPlugin_fpu          |          FpuCore |       1989 |       1969 |      20 |    0 | 1780 |      0 |      3 |          3 |
+|       (FpuPlugin_fpu)      |          FpuCore |       1553 |       1533 |      20 |    0 | 1590 |      0 |      3 |          3 |
+|       div_divider          |           FpuDiv |        277 |        277 |       0 |    0 |  108 |      0 |      0 |          0 |
+|       sqrt_sqrt            |          FpuSqrt |        159 |        159 |       0 |    0 |   82 |      0 |      0 |          0 |
+|     IBusCachedPlugin_cache | InstructionCache |        630 |        630 |       0 |    0 |  110 |      0 |      2 |          0 |
+|     dataCache_1            |        DataCache |        720 |        720 |       0 |    0 |   65 |      0 |      5 |          0 |
++----------------------------+------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

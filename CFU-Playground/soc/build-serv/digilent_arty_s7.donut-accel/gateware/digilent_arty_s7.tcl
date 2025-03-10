@@ -1,0 +1,120 @@
+
+# Create Project
+
+create_project -force -name digilent_arty_s7 -part xc7s50csga324-1
+set_msg_config -id {Common 17-55} -new_severity {Warning}
+
+# Add Sources
+
+read_verilog {/home/polykarpos/CFU-Playground/proj/donut-accel/cfu.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_compdec.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_csr.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_rf_if.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_mem_if.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_bufreg2.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_state.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_decode.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_immdec.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_top.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_rf_ram_if.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_alu.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_synth_wrapper.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_ctrl.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_bufreg.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_rf_ram.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_rf_top.v}
+read_verilog {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl/serv_aligner.v}
+read_verilog {/home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.donut-accel/gateware/digilent_arty_s7.v}
+
+# Add EDIFs
+
+
+# Add IPs
+
+
+# Add constraints
+
+read_xdc digilent_arty_s7.xdc
+set_property PROCESSING_ORDER EARLY [get_files digilent_arty_s7.xdc]
+
+# Add pre-synthesis commands
+
+
+# Synthesis
+
+synth_design -directive default -top digilent_arty_s7 -part xc7s50csga324-1 -include_dirs {/home/polykarpos/CFU-Playground/third_party/python/pythondata_cpu_serv/pythondata_cpu_serv/verilog/rtl}
+
+# Synthesis report
+
+report_timing_summary -file digilent_arty_s7_timing_synth.rpt
+report_utilization -hierarchical -file digilent_arty_s7_utilization_hierarchical_synth.rpt
+report_utilization -file digilent_arty_s7_utilization_synth.rpt
+
+# Power report
+
+report_power -file digilent_arty_s7_power_synth.rpt
+
+# Area report
+
+report_utilization -file digilent_arty_s7_area_synth.rpt
+
+# Optimize design
+
+opt_design -directive default
+
+# Add pre-placement commands
+
+
+# Placement
+
+place_design -directive default
+
+# Placement report
+
+report_utilization -hierarchical -file digilent_arty_s7_utilization_hierarchical_place.rpt
+report_utilization -file digilent_arty_s7_utilization_place.rpt
+report_io -file digilent_arty_s7_io.rpt
+report_control_sets -verbose -file digilent_arty_s7_control_sets.rpt
+report_clock_utilization -file digilent_arty_s7_clock_utilization.rpt
+
+# Power report after placement
+
+report_power -file digilent_arty_s7_power_place.rpt
+
+# Area report after placement
+
+report_utilization -file digilent_arty_s7_area_place.rpt
+
+# Add pre-routing commands
+
+
+# Routing
+
+route_design -directive default
+phys_opt_design -directive default
+write_checkpoint -force digilent_arty_s7_route.dcp
+
+# Routing report
+
+report_timing_summary -no_header -no_detailed_paths
+report_route_status -file digilent_arty_s7_route_status.rpt
+report_drc -file digilent_arty_s7_drc.rpt
+report_timing_summary -datasheet -max_paths 10 -file digilent_arty_s7_timing.rpt
+
+# Power report after routing
+
+report_power -file digilent_arty_s7_power_route.rpt
+
+# Area report after routing
+
+report_utilization -file digilent_arty_s7_area_route.rpt
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+
+# Bitstream generation
+
+write_bitstream -force digilent_arty_s7.bit 
+write_cfgmem -force -format bin -interface spix4 -size 16 -loadbit "up 0x0 digilent_arty_s7.bit" -file digilent_arty_s7.bin
+
+# End
+
+quit

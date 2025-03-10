@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jan 18 16:39:26 2025
+# Process ID: 51591
+# Current directory: /home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.proj_template_no_tflm/gateware
+# Command line: vivado -mode batch -source digilent_arty_s7.tcl
+# Log file: /home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.proj_template_no_tflm/gateware/vivado.log
+# Journal file: /home/polykarpos/CFU-Playground/soc/build/digilent_arty_s7.proj_template_no_tflm/gateware/vivado.jou
+#-----------------------------------------------------------
+source digilent_arty_s7.tcl

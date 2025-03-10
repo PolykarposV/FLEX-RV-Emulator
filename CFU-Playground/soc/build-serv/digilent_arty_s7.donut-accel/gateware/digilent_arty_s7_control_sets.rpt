@@ -1,0 +1,219 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Thu Jan 16 15:26:27 2025
+| Host         : LAPTOP-I4I07TAE running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_control_sets -verbose -file digilent_arty_s7_control_sets.rpt
+| Design       : digilent_arty_s7
+| Device       : xc7s50
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   141 |
+|    Minimum number of control sets                        |   141 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   386 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   141 |
+| >= 0 to < 4        |    15 |
+| >= 4 to < 6        |    47 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |    14 |
+| >= 16              |    51 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             451 |          161 |
+| No           | No                    | Yes                    |               4 |            2 |
+| No           | Yes                   | No                     |             806 |          277 |
+| Yes          | No                    | No                     |             353 |          111 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             928 |          297 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                                     Enable Signal                                    |                         Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+|  idelay_clk    |                                                                                      |                                                                 |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine7_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine4_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine1_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_trrdcon_ready_i_1_n_0                                 |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine3_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine2_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine5_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine0_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       | soc_serial_tx_rs232phytx_next_value_ce1                                              | sys_rst                                                         |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine6_twtpcon_ready_i_1_n_0                    |                1 |              1 |         1.00 |
+|  sys_clk       | soc_sdram_tfawcon_ready_reg0                                                         | soc_sdram_tfawcon_ready_i_1_n_0                                 |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_sdram_twtrcon_ready_i_1_n_0                                 |                1 |              1 |         1.00 |
+|  sys_clk       |                                                                                      | soc_builder_xilinxasyncresetsynchronizerimpl0_async_reset       |                1 |              2 |         2.00 |
+|  idelay_clk    |                                                                                      | soc_builder_xilinxasyncresetsynchronizerimpl0_async_reset       |                1 |              2 |         2.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine6_next_state                                          | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine0_next_state                                          | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_tx_tick                                                                          | soc_tx_phase[31]_i_1_n_0                                        |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine1_next_state                                          | sys_rst                                                         |                3 |              4 |         1.33 |
+|  sys_clk       | soc_builder_basesoc_bankmachine4_next_state                                          | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_rx_tick                                                                          | soc_rx_phase[31]_i_1_n_0                                        |                1 |              4 |         4.00 |
+|  sys_clk       | soc_uart_rx_fifo_wrport_we__0                                                        | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine7_next_state                                          | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine3_next_state                                          | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | storage_reg_0_15_0_5_i_1_n_0                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/E[0]                                                          | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine1_cmd_buffer_lookahead_level_reg[3]_0[0] | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine2_cmd_buffer_lookahead_level_reg[3]_0[0] | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_uart_tx_fifo_syncfifo_re                                                         | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine5_next_state                                          | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine7_cmd_buffer_lookahead_level_reg[0][0]   | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine6_cmd_buffer_lookahead_level_reg[0]_0[0] | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine4_cmd_buffer_lookahead_level_reg[0]_0[0] | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine3_cmd_buffer_lookahead_level_reg[3]_0[0] | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_uart_rx_fifo_rdport_re                                                           | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/state/o_cnt_done_reg_0[0]                                            |                                                                 |                1 |              4 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_sdram_bankmachine5_cmd_buffer_lookahead_level_reg[3]_0[0] | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_done                                                                             | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_sdram_time1[3]_i_1_n_0                                                           | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       | soc_builder_basesoc_bankmachine2_next_state                                          | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank2_out0_re                                           | sys_rst                                                         |                1 |              4 |         4.00 |
+|  sys_clk       | soc_builder_basesoc_multiplexer_next_state                                           | sys_rst                                                         |                2 |              4 |         2.00 |
+|  sys_clk       |                                                                                      | soc_builder_csr_bankarray_interface2_bank_bus_dat_r[3]_i_1_n_0  |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine7_trccon_ready_i_1_n_0                     |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine3_trccon_ready_i_1_n_0                     |                1 |              4 |         4.00 |
+|  idelay_clk    | soc_crg_reset_counter[3]_i_1_n_0                                                     | idelay_rst                                                      |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine6_trascon_count[1]_i_1_n_0                 |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine0_trccon_ready_i_1_n_0                     |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine1_trascon_count[1]_i_1_n_0                 |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | serv_rf_top/cpu/state/rcnt[0]                                   |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine5_trccon_ready_i_1_n_0                     |                1 |              4 |         4.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine4_trccon_ready_i_1_n_0                     |                2 |              4 |         2.00 |
+|  sys_clk       |                                                                                      | soc_sdram_bankmachine2_trascon_count[1]_i_1_n_0                 |                1 |              4 |         4.00 |
+|  sys_clk       | soc_sdram_time0[4]_i_1_n_0                                                           | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       | soc_uart_rx_fifo_level0[4]_i_1_n_0                                                   | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       | serv_rf_top/cpu/decode/opcode_reg[3]_0[0]                                            |                                                                 |                1 |              5 |         5.00 |
+|  sys_clk       | soc_sdram_zqcs_executer_trigger[4]_i_1_n_0                                           | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       | soc_uart_tx_fifo_level0[4]_i_1_n_0                                                   | sys_rst                                                         |                2 |              5 |         2.50 |
+|  sys_clk       | serv_rf_top/cpu/decode/opcode_reg[2]_1[0]                                            |                                                                 |                2 |              5 |         2.50 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank1_half_sys8x_taps0_re                               | sys_rst                                                         |                1 |              5 |         5.00 |
+|  sys_clk       |                                                                                      | soc_builder_csr_bankarray_interface1_bank_bus_dat_r[4]_i_1_n_0  |                3 |              5 |         1.67 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_control0_re                                  | sys_rst                                                         |                1 |              5 |         5.00 |
+|  sys_clk       | serv_rf_top/cpu/decode/opcode_reg[3]_1[0]                                            |                                                                 |                2 |              6 |         3.00 |
+|  sys_clk       | soc_sdram_sequencer_trigger                                                          | sys_rst                                                         |                1 |              6 |         6.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi3_command0_re                              | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi0_command0_re                              | sys_rst                                                         |                1 |              6 |         6.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi2_command0_re                              | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_sdram_phaseinjector1_command_storage[5]_i_1_n_0                                  | sys_rst                                                         |                2 |              6 |         3.00 |
+|  sys_clk       | soc_tx_data1_in0                                                                     |                                                                 |                1 |              7 |         7.00 |
+|  sys_clk       | soc_rx_data_rs232phyrx_next_value_ce1                                                |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       |                                                                                      | soc_builder_csr_bankarray_interface5_bank_bus_dat_r[7]_i_1_n_0  |                5 |              8 |         1.60 |
+|  sys_clk       | soc_uart_tx_fifo_syncfifo_re                                                         |                                                                 |                2 |              8 |         4.00 |
+|  soc_crg_clkin |                                                                                      |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       | soc_uart_rx_fifo_rdport_re                                                           |                                                                 |                2 |              8 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/decode/opcode_reg[2]_0[0]                                            |                                                                 |                4 |              9 |         2.25 |
+|  sys_clk       |                                                                                      | soc_sdram_timer_count1[9]_i_1_n_0                               |                2 |             10 |         5.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi3_address0_re                              |                                                                 |                3 |             14 |         4.67 |
+|  sys_clk       | soc_sdram_bankmachine0_row                                                           | sys_rst                                                         |                5 |             14 |         2.80 |
+|  sys_clk       | soc_sdram_bankmachine4_row[13]_i_1_n_0                                               | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_sdram_phaseinjector0_address_storage[13]_i_1_n_0                                 |                                                                 |                5 |             14 |         2.80 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi2_address0_re                              |                                                                 |                4 |             14 |         3.50 |
+|  sys_clk       | soc_sdram_bankmachine7_row[13]_i_1_n_0                                               | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_sdram_bankmachine6_row                                                           | sys_rst                                                         |                2 |             14 |         7.00 |
+|  sys_clk       | soc_sdram_bankmachine5_row[13]_i_1_n_0                                               | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi1_address0_re                              |                                                                 |                5 |             14 |         2.80 |
+|  sys_clk       | soc_sdram_bankmachine2_row[13]_i_1_n_0                                               | sys_rst                                                         |                4 |             14 |         3.50 |
+|  sys_clk       | soc_sdram_bankmachine1_row[13]_i_1_n_0                                               | sys_rst                                                         |                4 |             14 |         3.50 |
+|  sys_clk       | soc_sdram_bankmachine3_row[13]_i_1_n_0                                               | sys_rst                                                         |                3 |             14 |         4.67 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_adr_wishbone2csr_next_value_ce1           | FSM_onehot_soc_builder_basesoc_wishbone2csr_state_reg_n_0_[1]   |                5 |             14 |         2.80 |
+|  sys_clk       | serv_rf_top/cpu/immdec/soc_serv_ibus_ack                                             |                                                                 |                8 |             15 |         1.88 |
+|  sys_clk       | storage_reg_0_15_0_5_i_1_n_0                                                         |                                                                 |                2 |             16 |         8.00 |
+|  sys_clk       | soc_uart_rx_fifo_wrport_we__0                                                        |                                                                 |                2 |             16 |         8.00 |
+|  sys_clk       |                                                                                      | serv_rf_top/cpu/ctrl/soc_reset_storage_reg[0]                   |                8 |             18 |         2.25 |
+|  sys_clk       | serv_rf_top/cpu/immdec/soc_builder_count_reg_0_sn_1                                  | serv_rf_top/cpu/state/FDPE_1_0                                  |                5 |             20 |         4.00 |
+|  sys_clk       | soc_sdram_bankmachine5_cmd_buffer_sink_ready                                         | sys_rst                                                         |                8 |             23 |         2.88 |
+|  sys_clk       | soc_sdram_bankmachine2_cmd_buffer_sink_ready                                         | sys_rst                                                         |                9 |             23 |         2.56 |
+|  sys_clk       | soc_sdram_bankmachine0_cmd_buffer_sink_ready                                         | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_sdram_bankmachine3_cmd_buffer_sink_ready                                         | sys_rst                                                         |                8 |             23 |         2.88 |
+|  sys_clk       | soc_sdram_bankmachine7_cmd_buffer_sink_ready                                         | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_sdram_bankmachine1_cmd_buffer_sink_ready                                         | sys_rst                                                         |                6 |             23 |         3.83 |
+|  sys_clk       | soc_sdram_bankmachine4_cmd_buffer_sink_ready                                         | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_sdram_bankmachine6_cmd_buffer_sink_ready                                         | sys_rst                                                         |                7 |             23 |         3.29 |
+|  sys_clk       | soc_a7ddrphy_bitslip8_value10                                                        | soc_a7ddrphy_bitslip15_value1                                   |               13 |             24 |         1.85 |
+|  sys_clk       | soc_a7ddrphy_bitslip0_value30                                                        | soc_a7ddrphy_bitslip7_value1                                    |               10 |             24 |         2.40 |
+|  sys_clk       |                                                                                      | serv_rf_top/cpu/state/FDPE_1[0]                                 |                6 |             24 |         4.00 |
+|  sys_clk       |                                                                                      | soc_count[0]_i_1_n_0                                            |                6 |             24 |         4.00 |
+|  sys_clk       |                                                                                      | serv_rf_top/cpu/state/enable_reg[0]                             |                7 |             27 |         3.86 |
+|  sys_clk       |                                                                                      | soc_sdram_zqcs_timer_count1[0]_i_1_n_0                          |                7 |             27 |         3.86 |
+|  sys_clk       |                                                                                      | serv_rf_top/cpu/state/FDPE_1_1[0]                               |                8 |             28 |         3.50 |
+|  sys_clk       | soc_a7ddrphy_bitslip1_value00                                                        | soc_a7ddrphy_bitslip15_value0                                   |               11 |             30 |         2.73 |
+|  sys_clk       | soc_a7ddrphy_bitslip0_value00                                                        | soc_a7ddrphy_bitslip7_value0                                    |               11 |             30 |         2.73 |
+|  sys_clk       | serv_rf_top/cpu/state/dat_reg[5]_0[0]                                                |                                                                 |               14 |             30 |         2.14 |
+|  sys_clk       | serv_rf_top/cpu/decode/E[0]                                                          |                                                                 |               15 |             32 |         2.13 |
+|  sys_clk       | soc_builder_basesoc_dat_w_wishbone2csr_next_value_ce0                                |                                                                 |               12 |             32 |         2.67 |
+|  sys_clk       | soc_sdram_phaseinjector0_wrdata_storage[31]_i_1_n_0                                  |                                                                 |                7 |             32 |         4.57 |
+|  sys_clk       |                                                                                      | soc_builder_csr_bankarray_interface3_bank_bus_dat_r[31]_i_1_n_0 |               18 |             32 |         1.78 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi1_wrdata0_re                               |                                                                 |                8 |             32 |         4.00 |
+|  sys_clk       |                                                                                      | soc_builder_csr_bankarray_interface0_bank_bus_dat_r[31]_i_1_n_0 |               16 |             32 |         2.00 |
+|  sys_clk       |                                                                                      | soc_builder_csr_bankarray_interface4_bank_bus_dat_r[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  sys_clk       | soc_timer_update_value_re                                                            | sys_rst                                                         |                7 |             32 |         4.57 |
+|  sys_clk       | soc_bus_errors                                                                       | sys_rst                                                         |                8 |             32 |         4.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi2_wrdata0_re                               |                                                                 |                6 |             32 |         5.33 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank3_dfii_pi3_wrdata0_re                               |                                                                 |                7 |             32 |         4.57 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank4_load0_re                                          | sys_rst                                                         |                6 |             32 |         5.33 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank0_scratch0_re                                       | sys_rst                                                         |               12 |             32 |         2.67 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_3    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       |                                                                                      | soc_rx_phase[31]_i_1_n_0                                        |                8 |             32 |         4.00 |
+|  sys_clk       | soc_builder_csr_bankarray_csrbank4_reload0_re                                        | sys_rst                                                         |                7 |             32 |         4.57 |
+|  sys_clk       | serv_rf_top/cpu/state/E[0]                                                           | serv_rf_top/cpu/ctrl/soc_reset_storage_reg[0]                   |               14 |             32 |         2.29 |
+|  sys_clk       |                                                                                      | soc_tx_phase[31]_i_1_n_0                                        |                8 |             32 |         4.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_6    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_5    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_4    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_2    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_0    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]_1    |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | serv_rf_top/cpu/bufreg/soc_builder_basesoc_litedramwishbone2native_state_reg[1]      |                                                                 |                4 |             32 |         8.00 |
+|  sys_clk       | soc_sdram_csr_dfi_p0_rddata_valid                                                    | sys_rst                                                         |               45 |            128 |         2.84 |
+|  sys_clk       |                                                                                      | soc_sdram_master_p1_wrdata_mask[1]                              |               31 |            128 |         4.13 |
+|  sys_clk       |                                                                                      | sys_rst                                                         |              111 |            297 |         2.68 |
+|  sys_clk       |                                                                                      |                                                                 |              158 |            444 |         2.81 |
++----------------+--------------------------------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+
+
