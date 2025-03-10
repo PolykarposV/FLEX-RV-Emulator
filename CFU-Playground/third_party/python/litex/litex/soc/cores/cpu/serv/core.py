@@ -94,9 +94,8 @@ class SERV(CPU):
 
         # Add CFU.
         if self.variant == "cfu":
-          self.add_cfu("~/CFU-Playground/cfu.v")
-          #self.add_cfu("~/CFU-Playground/proj/donut-accel/cfu.v")
-
+          self.add_cfu("/workspace/CFU-Playground/proj/demo/cfu.v")
+          
         # Add Verilog sources
         self.add_sources(platform)
 
