@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 WORKDIR /workspace
 
-RUN apt update && apt install -y git wget bzip2 python3 unzip gcc make cmake openocd expect ccache verilator libevent-dev libjson-c-dev ninja-build libusb-1.0-0-dev libftdi1-dev nano locales libtinfo-de>
+RUN apt update && apt install -y git wget bzip2 python3 unzip gcc make cmake openocd expect ccache verilator libevent-dev libjson-c-dev ninja-build libusb-1.0-0-dev libftdi1-dev nano locales libtinfo-dev python3-requests usbutils
 RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
